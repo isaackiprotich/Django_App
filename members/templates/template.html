@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myglobal.css' %}">
+<body>
+  <h>this is a new begining</h>
+  
+   <table border='2'>
+    <tr>
+      <th>ID</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+    {% for x in mymembers %}
+      <tr>
+        <td>{{ x.id }}</td>
+          <td>{{ x.firstname }}</td>
+        <td>{{ x.lastname }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
